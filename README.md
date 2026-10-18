@@ -81,3 +81,7 @@ Docker: `docker build -t sql-rag .`, then `docker run --env-file .env -p 8000:80
 - [SQLGlot qualification implementation](https://github.com/tobymao/sqlglot/blob/main/sqlglot/optimizer/qualify.py)
 - [Pinecone vector upserts](https://docs.pinecone.io/guides/index-data/upsert-data)
 - [Snowflake Python connector](https://docs.snowflake.com/en/developer-guide/python-connector/python-connector-example)
+
+## Optional provider dependencies
+
+Local demo dependencies are in `requirements.txt`. Before enabling Claude, Gemini, Pinecone, Snowflake, semantic embeddings or YouTube, run `pip install -r requirements-providers.txt`. For CPU-only semantic embeddings on Linux, install PyTorch from its CPU wheel index first: `pip install torch --index-url https://download.pytorch.org/whl/cpu`. Docker builds include the local demo dependencies; add the provider installation to the Dockerfile when enabling remote providers.
