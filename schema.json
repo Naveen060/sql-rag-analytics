@@ -1,0 +1,21 @@
+{
+  "customers": {
+    "description": "Customer accounts, geographic region and signup date",
+    "columns": {
+      "customer_id": "INT",
+      "name": "TEXT",
+      "region": "TEXT",
+      "signup_date": "DATE"
+    }
+  },
+  "orders": {
+    "description": "Completed sales orders and revenue; joins customers on customer_id",
+    "columns": {
+      "order_id": "INT",
+      "customer_id": "INT",
+      "amount": "FLOAT",
+      "order_date": "DATE",
+      "status": "TEXT"
+    }
+  }
+}
